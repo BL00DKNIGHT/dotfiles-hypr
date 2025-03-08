@@ -1,0 +1,234 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+    font-family: 'Radio Canada Big', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @background;
+}
+
+#workspaces button.active {
+    /*color: @color1;*/
+    color: @background;
+    background-color: @foreground;
+    
+    border: 2px solid @foreground;
+}
+
+#workspaces {
+    /*background-color: @background;*/
+    background-color: @background;
+}
+
+.modules-left {
+    margin-left: 12px;    
+}
+
+.modules-right {
+    margin-right: 12px;    
+}
+
+#dock {
+    color: @color1;
+    background-color: @background;
+    margin: 0 2px 0 0px;
+    padding: 0 2px 0 0px;
+    border: 2px solid @color1;
+}
+
+#mpd,
+#custom-pacman,
+#battery,
+#pulseaudio,
+#backlight,
+#tray,
+#custom-weather {
+    color: @color5; /* color5 */
+    background-color: @background; /* background */
+    margin: 0 15px 0 0px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+    border: 2px solid @color5;
+}
+
+
+#custom-term {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/terminal.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#custom-firefox {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/firefox.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+#custom-filemanager {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/nautilus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#custom-apps {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/app-launcher.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#custom-gimp {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/gimp.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#custom-mail {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/mail-client.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#custom-spotify {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/spotify.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#custom-vscode {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/vscodium.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#custom-neovim {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/io.neovim.nvim.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+#custom-network {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/devices/network-wired.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#custom-lutris {
+    font-size: 35px;
+    background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/lutris.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#network {
+    color: @color2; /* color2 */
+    background-color: @background; /* background */
+    margin: 0 0px 0 0px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+    border: 2px solid @color2;
+}
+
+#clock {
+    color: @color3; /* color3 */
+    background-color: @background; /* background */
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 15px;
+    border: 2px solid @color3;
+}
+
+#network {
+    color: @color4; /* color4 */
+    border: 2px solid @color4;
+}
+
+#pulseaudio {
+    color: @color5; /* color5 */
+}
+
+#backlight {
+    color: @color5; /* color5 */
+}
+
+#custom-weather {
+    color: @color4; /* color2 */
+    background-color: @background; /* background */
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+}
+
+#custom-media {
+    color: @color4; /* color2 */
+    background-color: @background; /* background */
+    margin: 0 0px 0 15px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+    border: 2px solid @color1;
+}
+
+#mpd,
+#tray {
+    color: @color4;
+    border: 2px solid @color4;
+}
+
+#mpd.disconnected,
+#mpd.stopped,
+#mpd.paused {
+    color: @foreground;
+    border: 2px solid @foreground
+}
+
+#battery.warning {
+    color: yellow;
+}
+
+#battery.critical {
+    color: red;
+}

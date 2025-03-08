@@ -1,0 +1,227 @@
+[{
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "modules-left": [
+    "mpd",
+    "tray",
+    "clock",
+    "backlight"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "network"
+  ],
+
+  "tray": {
+    "icon-size": 17,
+    "spacing": 10,
+    "show-passive-items": true
+  },
+
+  "mpd": {
+    "format": "{stateIcon} - {title}",
+    "tooltip-format": " ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "tooltip-format-disconnected": " (Disconnected)",
+    "format-disconnected": "Disconnected",
+    "format-stopped": "Stopped",
+    "interval": 2,
+    "max-length": 25,
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+    "on-click": "mpc toggle"
+  },
+
+  "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "clock": {
+    "format": "󰥔   {:%H:%M}",
+    "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "󰂱  {volume}%",
+    "format-muted": "󰖁",
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "format-icons": {
+      "headphone": "  ",
+      "hands-free": " ",
+      "headset": "󰋎 ",
+      "phone": " ",
+      "portable": " ",
+      "car": "",
+      "default": ["󰖀", "󰕾"]
+    }
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{icon}   {essid}",
+    "format-ethernet": "󰈀   {ipaddr}/{cidr}",
+    "format-disconnected": "󰤭   Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "wofi-wifi-menu",
+    "max-length": 50,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": " ",
+      "2": " ",
+      "3": " ",
+      "4": " ",
+      "5": " ",
+      "6": " ",
+      "7": " ",
+      "8": "󰹕 ",
+      "OVERVIEW": "󰵆",
+      "default": " "
+    }
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}   {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
+  }
+},
+
+
+{
+  "layer": "top",
+  "exclusive": true,
+  "mod": "dock",
+  "passthrough": false,
+  "position": "bottom",
+  "fixed-center": true,
+  "margin-bottom": 8,
+  "height": 0,
+  "gtk-layer-shell": true,
+
+  "modules-center": [
+    "group/dock"
+  ],
+
+  "group/dock": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/apps","custom/term","custom/network","custom/vscode","custom/firefox","custom/librewolf","custom/filemanager","custom/spotify","custom/lutris","custom/neovim"
+    ]
+  },
+
+  "custom/term": {
+    //"format": "{} <span font='38'></span>",
+    "format": "{} ", 
+    "tooltip": true,
+    "tooltip-format": "Terminal",
+    "on-click": "kitty"
+  },
+
+  "custom/gimp": {
+    //"format": "{} <span font='38'></span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Gimp",
+    "on-click": "gimp"
+  },
+
+  "custom/firefox": {
+    //"format": "{} <span font='38'></span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Firefox",
+    "on-click": "librewolf"
+  },
+
+  "custom/vscode": {
+    //"format": "{} <span font='38'>󰨞</span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "VS Codium",
+    "on-click": "vscodium"
+  },
+
+  "custom/mail": {
+    //"format": "{} <span font='38'>󰶍</span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Mail",
+    "on-click": "kitty -e neomutt"
+  },
+
+  "custom/filemanager": {
+    //"format": "{} <span font='38'>󰉋</span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Filemanager",
+    "on-click": "nautilus"
+  },
+
+  "custom/neovim": {
+    //"format": "{} <span font='38'></span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "NeoVim",
+    "on-click": "kitty -e nvim"
+  },
+
+  "custom/spotify": {
+    //"format": "{} <span font='38'></span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Spotify",
+    "on-click": "kitty -e ncmpcpp"
+  },
+
+  "custom/apps": {
+    //"format": "{} <span font='38'>󰵆</span>",
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Applications",
+    "on-click": "wofi"
+  },
+
+  "custom/network": {
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Network",
+    "on-click": "kitty -e nmtui"
+  },
+
+  "custom/lutris": {
+    "format": "{} ",
+    "tooltip": true,
+    "tooltip-format": "Lutris",
+    "on-click": "lutris"
+  }
+
+}]

@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/bl00d/Pictures/Wallpapers/cyberpunk-wallpaper-hd-59.png",
+    "alpha": "100",
+    "special": {
+        "background": "#070E13",
+        "foreground": "#9bd6e0",
+        "cursor": "#9bd6e0"
+    },
+    "colors": {
+        "color0": "#070E13",
+        "color1": "#28549D",
+        "color2": "#3F4DBB",
+        "color3": "#5C619F",
+        "color4": "#5D69DB",
+        "color5": "#B251BB",
+        "color6": "#6199DF",
+        "color7": "#9bd6e0",
+        "color8": "#6c959c",
+        "color9": "#28549D",
+        "color10": "#3F4DBB",
+        "color11": "#5C619F",
+        "color12": "#5D69DB",
+        "color13": "#B251BB",
+        "color14": "#6199DF",
+        "color15": "#9bd6e0"
+    }
+}
