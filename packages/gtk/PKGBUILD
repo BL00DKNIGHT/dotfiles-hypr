@@ -1,0 +1,23 @@
+pkgname=gtk-base
+pkgver=1.0
+pkgrel=1
+arch=(any)
+depends=(
+  gtk-layer-shell
+  gtk3
+  gtk4
+  libadwaita
+  libportal
+  libportal-gtk4
+  gtkmm3
+  gtkmm-4.0
+  python-gobject
+  gobject-introspection
+  gobject-introspection-runtime
+  upower
+  xdg-user-dirs-gtk
+  adw-gtk-theme
+  sassc
+  blueprint-compiler
+)
+

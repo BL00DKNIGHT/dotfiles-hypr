@@ -1,0 +1,32 @@
+pkgname=system-base
+pkgver=1.0
+pkgrel=1
+arch=(any)
+depends=(
+  wireplumber
+  pipewire
+  pipewire-pulse
+  base
+  base-devel
+  cmake
+  make
+  git
+  rsync
+  p7zip
+  gvfs
+  udiskie
+  udisks2
+  power-profiles-daemon
+  greetd
+  greetd-agreety
+  networkmanager
+  docker
+  booster
+  dbus
+  paru
+  fzf
+  curl
+  wget
+  python-pipx
+  mesa
+)

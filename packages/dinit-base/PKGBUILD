@@ -1,0 +1,26 @@
+pkgname=dinit-base
+pkgver=1.0
+pkgrel=1
+arch=(any)
+depends=(
+  dinit
+  dinit-base
+  turnstile-dinit
+  glib2
+  glib2-devel
+  dbus-dinit
+  dbus-dinit-user
+  elogind
+  elogind-dinit
+  mpd-dinit-user
+  power-profiles-daemon-dinit
+  networkmanager-dinit
+  deluge-dinit
+  docker-dinit
+  greetd-dinit
+  wireplumber-dinit
+  pipewire-dinit
+  pipewire-pulse-dinit
+  dbus-dinit
+  artix-archlinux-support
+)

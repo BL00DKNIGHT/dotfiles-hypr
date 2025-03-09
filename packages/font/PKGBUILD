@@ -1,0 +1,19 @@
+pkgname=fonts-package
+pkgver=1.0
+pkgrel=1
+arch=(any)
+depends=(
+  noto-fonts
+  adobe-source-code-pro-fonts
+  adobe-source-sans-fonts
+  adobe-source-serif-fonts
+  ttf-dejavu-nerd
+  ttf-firacode-nerd
+  ttf-hack-nerd
+  ttf-jetbrains-mono-nerd
+  ttf-material-symbols-variable-git
+  ttf-liberation-mono-nerd
+  ttf-nerd-fonts-symbols
+  ttf-nerd-fonts-symbols-common
+  ttf-nerd-fonts-symbols-mono
+)

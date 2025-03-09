@@ -1,7 +1,7 @@
 @import url("../../.cache/wal/colors-waybar.css");
 
 * {
-    font-family: 'Radio Canada Big', sans-serif;
+    font-family: 'Sans Regular', sans-serif;
     font-weight: bold;
     font-size: 14px;
     border-radius: 13px;
@@ -58,7 +58,7 @@ window#waybar {
 
 
 #custom-term {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/terminal.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -68,7 +68,7 @@ window#waybar {
 }
 
 #custom-firefox {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/firefox.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@ window#waybar {
 
 
 #custom-filemanager {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/nautilus.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@ window#waybar {
 }
 
 #custom-apps {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/app-launcher.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -99,7 +99,7 @@ window#waybar {
 }
 
 #custom-gimp {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/gimp.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -109,7 +109,7 @@ window#waybar {
 }
 
 #custom-mail {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/mail-client.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -119,7 +119,7 @@ window#waybar {
 }
 
 #custom-spotify {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/spotify.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -129,7 +129,7 @@ window#waybar {
 }
 
 #custom-vscode {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/vscodium.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@ window#waybar {
 }
 
 #custom-neovim {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/io.neovim.nvim.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -150,7 +150,7 @@ window#waybar {
 
 
 #custom-network {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/devices/network-wired.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -160,7 +160,7 @@ window#waybar {
 }
 
 #custom-lutris {
-    font-size: 35px;
+    font-size: 32px;
     background-image: url("/usr/share/icons/Papirus-Dark/32x32/apps/lutris.svg");
     background-position: center;
     background-repeat: no-repeat;

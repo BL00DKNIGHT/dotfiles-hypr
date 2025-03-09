@@ -1,0 +1,42 @@
+pkgname=dot-base
+pkgver=1.0
+pkgrel=1
+arch=(any)
+depends=(
+  git
+  github-cli
+  swww
+  kitty
+  waybar
+  wofi
+  rofi
+  polkit
+  polkit-gnome
+  neovim
+  nautilus
+  librewolf
+  zsh
+  zoxide
+  lsd
+  bat
+  brightnessctl
+  playerctl
+  fastfetch
+  ncmpcpp
+  mpd
+  mpc
+  ranger
+  htop
+  cava
+  vesktop
+  obsidian
+  deluge
+  vesktop
+  gradience
+  pavucontrol
+  helvum
+  pulsemixer
+  wl-clipboard
+  dunst
+  nwg-look
+)
