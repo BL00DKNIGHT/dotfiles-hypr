@@ -5,7 +5,7 @@ printf "  This script assumes that you are on a mostly clean arch install,\n"
 printf "  it will attempt to install the dots and any configuration will be removed.\n"
 
 distro_id="$(lsb_release -a | awk 'FNR == 2 {print $3}')"
-aur_list="xava-git"
+aur_list="xava-git wofi-wifi-menu-git"
 grouplist="games dbus scanner power docker adbusers seat video uucp storage optical lp input audio"
 current_user_quoted=\"$(whoami)\"
 current_user="$(whoami)"
