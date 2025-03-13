@@ -6,8 +6,8 @@
   "margin-top": 8,
   "margin-bottom": 0,
   "modules-left": [
-    "mpd",
     "tray",
+    "mpd",
     "clock",
     "backlight"
   ],
