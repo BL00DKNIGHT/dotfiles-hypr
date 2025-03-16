@@ -99,7 +99,7 @@ case "$0" in
     git pull
     rsync -ah ./config/hyprwal/* $HOME/.config/
     rsync -ah ./extra/librewolf/librewolf.overrides.cfg $HOME/.librewolf
-    printf "  DONE."
+    printf "  DONE.\n"
     ;;
   ./test)
     printf "TESTING\n"
