@@ -94,7 +94,7 @@ case "$0" in
     printf "  Setup complete!"
     printf "  Please activate the necessary services and reboot."
     ;;
-  ./packages)
+  ./packagesconfig)
     printf "\e[34m[$0]: INSTALLING PACKAGES AND CONFIG ONLY\n"
 
     distro_id="$(lsb_release -a | awk 'FNR == 2 {print $3}')"
