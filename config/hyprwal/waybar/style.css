@@ -13,12 +13,20 @@ window#waybar {
     color: @background;
 }
 
-#workspaces button.active {
+#workspaces button.visible {
     /*color: @color1;*/
     color: @background;
     background-color: @foreground;
     
     border: 2px solid @foreground;
+}
+
+#workspaces button.active {
+    /*color: @color1;*/
+    color: @background;
+    background-color: @color1;
+    
+    border: 2px solid @color1;
 }
 
 #workspaces {
@@ -43,17 +51,14 @@ window#waybar {
 }
 
 #mpd,
+#mic,
 #custom-pacman,
 #battery,
 #pulseaudio,
 #backlight,
 #tray,
 #custom-weather {
-    color: @color5; /* color5 */
-    background-color: @background; /* background */
-    margin: 0 15px 0 0px;
-    padding: 0 15px 0 15px; /* top, right, bottom, left */
-    border: 2px solid @color5;
+    color: @color1;
 }
 
 
@@ -177,12 +182,18 @@ window#waybar {
     border: 2px solid @color2;
 }
 
-#clock {
-    color: @color3; /* color3 */
+#custom-recording {
+    color: @color2; /* color2 */
     background-color: @background; /* background */
-    margin: 0 15px 0 0;
-    padding: 0 15px 0 15px;
-    border: 2px solid @color3;
+    margin: 0 0px 0 0px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+    border: 2px solid @color2;
+}
+
+#clock {
+    color: @color1;
+    margin: 0 0px 0 0;
+    padding: 8 0px 8 0px;
 }
 
 #network {
@@ -190,8 +201,9 @@ window#waybar {
     border: 2px solid @color4;
 }
 
+#cpu,
 #pulseaudio {
-    color: @color5; /* color5 */
+    color: @color1; /* color5 */
 }
 
 #backlight {

@@ -1,0 +1,26 @@
+sw_volume: 96
+audio_device_state:1:pulse audio
+audio_device_state:1:visualizer feed
+state: pause
+current: 4
+time: 242.11
+random: 1
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:Random Breakcore.m4a
+1:I Really Want to Stay at Your House.m4a
+2:HEAR ME.m4a
+3:Not Perfect.m4a
+4:The Cruel Angel's Thesis.m4a
+5:VIOLENCE.m4a
+6:A Phantom Pain.m4a
+7:METAMORPHOSIS - Slowed + Reverb - INTERWORLD.m4a
+8:The Man Who Sold the World.m4a
+9:Euphoria.m4a
+playlist_end

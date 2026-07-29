@@ -3,40 +3,45 @@ pkgver=1.0
 pkgrel=1
 arch=(any)
 depends=(
-  git
-  github-cli
-  swww
-  kitty
-  waybar
-  wofi
-  rofi
-  polkit
-  polkit-gnome
-  neovim
-  nautilus
-  librewolf
-  zsh
-  zoxide
-  lsd
+  ani-cli
+  awww
   bat
   brightnessctl
-  playerctl
-  fastfetch
-  ncmpcpp
-  mpd
-  mpc
-  ranger
-  htop
   cava
-  vesktop
-  obsidian
   deluge
-  vesktop
-  gradience
-  pavucontrol
-  helvum
-  pulsemixer
-  wl-clipboard
   dunst
+  fastfetch
+  git
+  github-cli
+  gradience
+  helvum
+  htop
+  kitty
+  librewolf
+  lsd
+  mpc
+  mpd
+  mpv
+  nautilus
+  ncmpcpp
+  neovim
   nwg-look
+  obsidian
+  pavucontrol
+  playerctl
+  polkit
+  polkit-gnome
+  pulsemixer
+  ranger
+  rofi
+  vesktop
+  waybar
+  wl-clipboard
+  wlsunset
+  wofi
+  zathura
+  zathura-djvu
+  zathura-pdf-mudpf
+  zoxide
+  zsh
 )

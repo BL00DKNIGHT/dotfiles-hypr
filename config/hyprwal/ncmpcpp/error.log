@@ -1,0 +1,5 @@
+TagLib: Could not open file /home/bl00d/mus/Cipher.m4a
+writeCommonTags: couldn't write 'year' tag to 'The Cruel Angel's Thesis.m4a' as it's not a positive integer
+writeCommonTags: couldn't write 'track' tag to 'The Cruel Angel's Thesis.m4a' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'Random Breakcore.m4a' as it's not a positive integer
+writeCommonTags: couldn't write 'track' tag to 'Random Breakcore.m4a' as it's not a positive integer

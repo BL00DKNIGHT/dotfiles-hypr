@@ -20,7 +20,7 @@
 
 
 # Set some variables
-wall_dir="${HOME}/Pictures/wallpapers/"
+wall_dir="${HOME}/Pictures/wallpapers"
 cacheDir="${HOME}/.cache/jp/${theme}"
 rofi_command="rofi -dmenu -theme ${HOME}/.config/rofi/wallSelect.rasi -theme-str ${rofi_override}"
 
@@ -38,7 +38,7 @@ monitor_res=$(( $monitor_res * $physical_monitor_size / $dotsperinch ))
 rofi_override="element-icon{size:${monitor_res}px;border-radius:0px;}"
 
 # Convert images in directory and save to cache dir
-for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp}; do
+for imagen in "$wall_dir"/*; do
 	if [ -f "$imagen" ]; then
 		nombre_archivo=$(basename "$imagen")
 			if [ ! -f "${cacheDir}/${nombre_archivo}" ] ; then
@@ -52,14 +52,14 @@ wall_selection=$(find "${wall_dir}"  -maxdepth 1  -type f \( -iname "*.jpg" -o -
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
-swww img ${wall_dir}/${wall_selection}
-wal --backend wal -i ${wall_dir}/${wall_selection}
-killall -SIGUSR2 waybar
-killall -SIGUSR1 xava
-killall -SIGUSR1 cava
-ln -sf ${wall_dir}/${wall_selection} ~/.cache/current-wallpaper
-$HOME/.local/bin/pywalfox update
-cp -r $HOME/.cache/wal/colors-discord.css $HOME/.config/vesktop/themes/pywal-discord-default.theme.css
-$HOME/.config/hypr/scripts/gradience2css -f $HOME/.cache/wal/pywal.json
-cat $HOME/.config/hypr/scripts/gtk-transparency.css | tee -a $HOME/.config/gtk-3.0/gtk.css $HOME/.config/gtk-4.0/gtk.css
-exit 0
+ln -sf ${wall_dir}/${wall_selection} $HOME/.cache/current-wallpaper &
+wal --backend wal -e --contrast 2.5 --saturate 0.2 -i ${wall_dir}/${wall_selection} &
+awww img ${wall_dir}/${wall_selection} &
+magick ${wall_dir}/${wall_selection} -region 33.3%x100%+150%+0 -blur 0x25 +region ~/.cache/lockscreen-wallpaper &
+    killall -SIGUSR2 waybar
+    killall -SIGUSR2 xava
+    killall -SIGUSR1 cava
+    cp -r $HOME/.cache/wal/colors-discord.css $HOME/.config/vesktop/themes/pywal-discord-default.theme.css
+    $HOME/.config/hypr/scripts/gradience2css.sh -f $HOME/.cache/wal/pywal.json >> /dev/null
+    cat $HOME/.config/hypr/scripts/gtk-transparency.css | tee -a $HOME/.config/gtk-3.0/gtk.css $HOME/.config/gtk-4.0/gtk.css >> /dev/null
+    $HOME/.local/bin/pywalfox update

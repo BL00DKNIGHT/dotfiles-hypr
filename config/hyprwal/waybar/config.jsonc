@@ -1,23 +1,16 @@
 [{
   "layer": "top",
-  "position": "top",
+  "position": "right",
+  "output": "LVDS-1",
   "exclusive": true,
   "passthrough": false,
-  "margin-top": 8,
-  "margin-bottom": 0,
-  "modules-left": [
-    "tray",
-    "mpd",
-    "clock",
-    "backlight"
-  ],
+  "margin-right": 8,
+  "margin-left": 2,
+  "orientation": "vertical",
   "modules-center": [
-    "hyprland/workspaces"
-  ],
-  "modules-right": [
-    "pulseaudio",
-    "battery",
-    "network"
+    "hyprland/workspaces#top",
+    "clock",
+    "hyprland/workspaces#bottom"
   ],
 
   "tray": {
@@ -51,28 +44,11 @@
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
-  "clock": {
+  /*"clock": {
     "format": "󰥔   {:%H:%M}",
-    "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}"
-  },
+    "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}",
+  },*/
 
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "󰂱  {volume}%",
-    "format-muted": "󰖁",
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"],
-    "format-icons": {
-      "headphone": "  ",
-      "hands-free": " ",
-      "headset": "󰋎 ",
-      "phone": " ",
-      "portable": " ",
-      "car": "",
-      "default": ["󰖀", "󰕾"]
-    }
-  },
 
   "network": {
     "interface": "wlan0",
@@ -89,12 +65,18 @@
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
   },
 
-  "hyprland/workspaces": {
+  "custom/recording": {
+    "exec": "exec ~/.config/waybar/scripts/record-screend",
+    "exec-on-event": false,
+    "on-click": "pkill -INT -P \"$(pgrep -xo record-screen)\" wf-recorder"
+  },
+
+/*  "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
+    "format": "{icon} {windows}",
+    "format-icons": { 
       "1": " ",
       "2": " ",
       "3": " ",
@@ -105,6 +87,84 @@
       "8": "󰹕 ",
       "OVERVIEW": "󰵆",
       "default": " "
+    }
+  },*/
+
+  /*"hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "orientation": "vertical",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "1": "〇",
+      "2": "一",
+      "3": "二",
+      "4": "三",
+      "5": "四",
+      "6": "五",
+      "7": "六",
+      "8": "七",
+      "9": "八",
+      "10": "九"
+    }
+  },*/
+
+  "clock": {
+    "format": "{:%H:%M\n%d-%m}",
+    "tooltip": false
+  },
+
+   "hyprland/workspaces#top": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "orientation": "vertical",
+    "persistent-workspaces": {
+      "*": [1,2,3,4,5]
+    },
+    "ignore-workspaces": ["6","7","8","9","10"],
+    "format": "{icon}",
+    "format-icons": {
+      "1": "〇",
+      "2": "一",
+      "3": "二",
+      "4": "三",
+      "5": "四"
+    }
+  },
+
+   "hyprland/workspaces#bottom": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "orientation": "vertical",
+    "persistent-workspaces": {
+      "*": [6,7,8,9,10]
+    },
+    "ignore-workspaces": ["1","2","3","4","5"],
+    "format": "{icon}",
+    "format-icons": {
+      "6": "五",
+      "7": "六",
+      "8": "七",
+      "9": "八",
+      "10": "九"
     }
   },
 
@@ -121,26 +181,26 @@
   "exclusive": true,
   "mod": "dock",
   "passthrough": false,
-  "position": "bottom",
+  "output": "LVDS-1",
+  "position": "left",
   "fixed-center": true,
-  "margin-bottom": 8,
+  "margin-left": 8,
   "height": 0,
-  "gtk-layer-shell": true,
 
   "modules-center": [
     "group/dock"
   ],
 
   "group/dock": {
-    "orientation": "horizontal",
+    "orientation": "vertical",
     "modules": [
-      "custom/apps","custom/term","custom/network","custom/vscode","custom/firefox","custom/librewolf","custom/filemanager","custom/spotify","custom/lutris","custom/neovim"
+      "custom/apps","custom/term","custom/network","custom/vscode","custom/firefox","custom/librewolf","custom/filemanager","custom/lutris","custom/neovim"
     ]
   },
 
   "custom/term": {
     //"format": "{} <span font='38'></span>",
-    "format": "{} ", 
+    "format": "{} ",
     "tooltip": true,
     "tooltip-format": "Terminal",
     "on-click": "kitty"
@@ -159,7 +219,7 @@
     "format": "{} ",
     "tooltip": true,
     "tooltip-format": "Firefox",
-    "on-click": "librewolf"
+    "on-click": "DRI_PRIME=1 librewolf"
   },
 
   "custom/vscode": {

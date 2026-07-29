@@ -5,7 +5,7 @@ let foreground = "{foreground}"
 let cursor     = "{cursor}"
 
 " Colors
-let color0  = "#{color0.lighten(1%)}"
+let color0  = "{color0.lighten(1%)}"
 let color1  = "{color1}"
 let color2  = "{color2}"
 let color3  = "{color3}"

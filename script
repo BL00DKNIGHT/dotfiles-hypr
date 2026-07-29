@@ -94,6 +94,57 @@ case "$0" in
     printf "  Setup complete!"
     printf "  Please activate the necessary services and reboot."
     ;;
+  ./packages)
+    printf "\e[34m[$0]: INSTALLING PACKAGES AND CONFIG ONLY\n"
+
+    distro_id="$(lsb_release -a | awk 'FNR == 2 {print $3}')"
+    aur_list="xava-git wofi-wifi-menu-git hyprfreeze-git"
+    grouplist="games dbus scanner power docker adbusers seat video uucp storage optical lp input audio"
+    current_user_quoted=\"$(whoami)\"
+    current_user="$(whoami)"
+
+    printf "\n  Copying the configs.\n"
+    cp -ar ./config/hyprwal/* $HOME/.config/
+    cp -ar ./extra/librewolf/librewolf.overrides.cfg $HOME/.librewolf
+
+
+    printf "\n  Installing packages and dependencies.\n"
+    cd ./packages
+    case $distro_id in
+      Arch) for pkg in system-base dot-base gtk font hyprland; do
+          cd $pkg
+          makepkg -siCc
+          cd ..
+        done
+      ;;
+      Artix) for pkg in system-base dinit-base dot-base gtk font hyprland; do
+          cd $pkg
+          makepkg -siCc
+          cd ..
+        done
+      ;;
+    esac
+
+    paru -S --sudoloop --skipreview --cleanafter --needed ${aur_list}
+
+    printf "\n  Configuring greetd.\n"
+    if [ ! -f "/etc/greetd/config.toml" ]; then
+      sudo bash -c "cat ./extra/greetd.toml >> /etc/greetd/config.toml"
+      sudo bash -c "echo 'user =' '"${current_user_quoted}"' >> /etc/greetd/config.toml"
+    else
+      echo "Greetd config is already present"
+    fi
+
+    printf "\n  Appending groups to user.\n"
+    sudo echo ${grouplist} | xargs -n 1 groupadd -r
+    sudo usermod -a -G games,dbus,scanner,power,docker,adbusers,seat,video,uucp,storage,optical,lp,input,audio ${current_user}
+
+    printf "\n  Installing pywal16 and pywalfox.\n"
+    pipx install pywal16
+    pipx install --index-url https://test.pypi.org/simple/ pywalfox==2.8.0rc1
+    $HOME/.local/bin/pywalfox install --browser librewolf
+    printf "DONE.\n"
+    ;;
   ./update)
     printf "\e[34m[$0]: UPDATING CONFIGS\n"
     git pull

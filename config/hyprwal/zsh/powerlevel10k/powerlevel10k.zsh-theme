@@ -81,3 +81,5 @@ function _p9k_init_locale() {
 
 (( ${#__p9k_src_opts} )) && setopt ${__p9k_src_opts[@]}
 'builtin' 'unset' '__p9k_src_opts'
+
+clear

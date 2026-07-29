@@ -19,15 +19,11 @@ M.highlights_base = function(colors)
     Cursor = { fg = colors.foreground, bg = colors.cursor },
     CursorColumn = { bg = colors.color0 },
     CursorIM = { fg = colors.foreground, bg = colors.cursor },
-    CursorLine = { bg = colors.background },
+    CursorLine = { bg = colors.background }, -- the line which the cursor is
     CursorLineNr = { fg = colors.color0, bg = colors.color4 },
     Debug = { fg = colors.color11 },
     Define = { fg = colors.color6 },
     Delimiter = { fg = colors.foreground },
-    DiffAdd = { fg = colors.foreground, bg = colors.color2 },
-    DiffChange = { fg = colors.color0, bg = colors.color0 },
-    DiffDelete = { fg = colors.foreground, bg = colors.color1 },
-    DiffText = { fg = colors.foreground, bg = colors.color1 },
     Directory = { fg = colors.color4 },
     EndOfBuffer = { fg = colors.background, bg = colors.color0 },
     Error = { fg = colors.color11, bg = colors.color0 },
@@ -44,7 +40,7 @@ M.highlights_base = function(colors)
     Include = { fg = colors.color6 },
     Keyword = { fg = colors.color4 },
     Label = { fg = colors.color4 },
-    LineNr = { fg = colors.color1, bg = colors.color0 }, -- line number
+    LineNr = { fg = colors.color1, bg = colors.background }, -- line number
     Macro = { fg = colors.color6 },
     MatchParen = { fg = colors.color4, bg = colors.color0 },
     ModeMsg = { fg = colors.foreground, bg = colors.color0 },
@@ -123,6 +119,11 @@ M.highlights_base = function(colors)
     DiagnosticUnderlineWarn = { undercurl = true, fg = colors.color11 },
 
     -- diff
+    DiffAdd = { fg = colors.foreground, bg = colors.color2 },
+    DiffChange = { fg = colors.color0, bg = colors.color0 },
+    DiffDelete = { fg = colors.foreground, bg = colors.color1 },
+    DiffText = { fg = colors.foreground, bg = colors.color1 },
+
     diffAdded = { fg = colors.color2 },
     diffChanged = { fg = colors.color3 },
     diffFile = { fg = colors.color7 },
@@ -225,8 +226,8 @@ M.highlights_base = function(colors)
     NvimTreeGitNew = { fg = colors.color4 },
     NvimTreeImageFile = { fg = colors.foreground },
     NvimTreeIndentMarker = { fg = colors.foreground },
-    NvimTreeNormal = { fg = colors.foreground, bg = colors.color0 },
-    NvimTreeNormalNC = { fg = colors.foreground, bg = colors.color0 },
+    NvimTreeNormal = { fg = colors.foreground, bg = colors.background },
+    NvimTreeNormalNC = { fg = colors.foreground, bg = colors.background },
     NvimTreeRootFolder = { fg = colors.color6 },
     NvimTreeSpecialFile = { fg = colors.color6 },
     NvimTreeStatusLineNC = { bg = colors.color0, fg = colors.color0 },
